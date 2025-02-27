@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Lista from './components/Lista'
+import './App.css'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -22,23 +24,14 @@ function App() {
     }
   ]) //dados de inicio
 
-  //o cara do video vai fazer tudo nesse componente, eu vou separar em diferentes componentes pra ficar certo, só passar a cons todos pra eles dps e fica tudo igual 
-
   return (
     <div className='app' >
       <h1>Lista de tarefas</h1>
       <div className='todo-list'>
         {todos.map((todo)=> (
-          <section>
-            <div className='content'>
-              <p>{todo.text}</p> 
-              <p className='category'> ({todo.category}) </p>
-            </div>
-            <div>
-              <button>Completar</button>
-              <button>X</button>
-            </div>
-          </section>
+          <Lista TodoC={todo}>
+
+          </Lista>
         ))}
 
       </div>
