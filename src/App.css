@@ -11,6 +11,24 @@ body {
 
 .app {
   max-width: 60vw;
-  margin: 0 auto;
+  margin: 0 auto 300px;
   background-color: #efefef;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+input {
+  box-sizing: border-box;
 }
