@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Lista from './components/Lista'
 import './App.css'
+import ListaForm from './components/ListaForm'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -35,6 +36,7 @@ function App() {
         ))}
 
       </div>
+      <ListaForm />
     </div>
   )
 }
