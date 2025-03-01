@@ -32,3 +32,11 @@ p {
 input {
   box-sizing: border-box;
 }
+
+button {
+  background-color: #333974;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  
+}
