@@ -1,10 +1,18 @@
-import React from "react";
+import {useState} from "react";
 
 const ListaForm = () => {
+
+    const [value, setValue] = useState("") //titulo
+    const [category, setCategory] = useState("") //categoria
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Formulario enviado")
+    }
     return (
         <div className="todo-form">
             <h2>Criar tarefa:</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Digite o titulo"/>
                 <select>
                     <option value="">Selecione uma categoria</option>
