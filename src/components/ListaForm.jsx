@@ -7,14 +7,18 @@ const ListaForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Formulario enviado")
+        if(!value || !category) return;
+        console.log(value, category)
+        //adicionar
+        setValue("")
+        setCategory("")
     }
     return (
         <div className="todo-form">
             <h2>Criar tarefa:</h2>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Digite o titulo"/>
-                <select>
+                <input type="text" value={value} placeholder="Digite o titulo" onChange={(e) => setValue(e.target.value)}/>
+                <select onChange={(e) => setCategory(e.target.value)} value={category}>
                     <option value="">Selecione uma categoria</option>
                     <option value="Trabalho">Trabalho</option>
                     <option value="Pessoal">Pessoal</option>
