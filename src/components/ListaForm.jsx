@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const ListaForm = () => {
+const ListaForm = ({AddTodo}) => {
 
     const [value, setValue] = useState("") //titulo
     const [category, setCategory] = useState("") //categoria
@@ -9,10 +9,11 @@ const ListaForm = () => {
         e.preventDefault();
         if(!value || !category) return;
         console.log(value, category)
-        //adicionar
+        AddTodo(value, category)
         setValue("")
         setCategory("")
     }
+    
     return (
         <div className="todo-form">
             <h2>Criar tarefa:</h2>
