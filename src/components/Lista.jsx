@@ -1,6 +1,6 @@
 import '../App.css'
 
-function Lista({TodoC}) {
+function Lista({TodoC, RemoveTodo}) {
 
   return (
     
@@ -11,7 +11,7 @@ function Lista({TodoC}) {
         </div>
         <div>
             <button className='complete'>Completar</button>
-            <button className='remove'>X</button>
+            <button className='remove' onClick={() => RemoveTodo(TodoC.id)}>X</button>
         </div>
     </section>
       
