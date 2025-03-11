@@ -24,8 +24,9 @@ function App() {
       isCompleted: false,
     }
   ]) //dados de inicio
-
-  const addTodo = (text, category) => { //Criando um novo item para a lista
+  
+  //Criando um novo item para a lista
+  const addTodo = (text, category) => { 
     const newTodos = [
       ...todos,
       {
