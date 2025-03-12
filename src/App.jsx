@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Lista from './components/Lista'
 import './App.css'
 import ListaForm from './components/ListaForm'
+import Search from './components/Search'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -56,6 +57,7 @@ function App() {
   return (
     <div className='app' >
       <h1>Lista de tarefas</h1>
+      <Search />
       <div className='todo-list'>
         {todos.map((todo)=> (
           <Lista key={todo.id} TodoC={todo} RemoveTodo={RemoveTodo} completeTodo={completeTodo}/>
