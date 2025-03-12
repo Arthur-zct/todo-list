@@ -26,6 +26,8 @@ function App() {
     }
   ]) //dados de inicio
   
+  const [search, setSearch] = useState("")
+
   //Criando um novo item para a lista
   const addTodo = (text, category) => { 
     const newTodos = [
@@ -57,9 +59,10 @@ function App() {
   return (
     <div className='app' >
       <h1>Lista de tarefas</h1>
-      <Search />
+      <Search search={search} setSearch={setSearch} />
       <div className='todo-list'>
-        {todos.map((todo)=> (
+        {todos.filter((todo) => todo.text.toLowerCase().includes(search.toLowerCase()))
+        .map((todo)=> (
           <Lista key={todo.id} TodoC={todo} RemoveTodo={RemoveTodo} completeTodo={completeTodo}/>
         ))}
 
