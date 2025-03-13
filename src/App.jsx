@@ -3,6 +3,7 @@ import Lista from './components/Lista'
 import './App.css'
 import ListaForm from './components/ListaForm'
 import Search from './components/Search'
+import Filter from './components/Filter'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -60,6 +61,7 @@ function App() {
     <div className='app' >
       <h1>Lista de tarefas</h1>
       <Search search={search} setSearch={setSearch} />
+      <Filter />
       <div className='todo-list'>
         {todos.filter((todo) => todo.text.toLowerCase().includes(search.toLowerCase()))
         .map((todo)=> (
