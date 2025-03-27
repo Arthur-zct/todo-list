@@ -72,8 +72,9 @@ function App() {
             filter === "All" ? true 
           : filter === "Completed" 
           ? todo.isCompleted 
-          : !todo.isCompleted
-        )
+          : !todo.isCompleted 
+          //se for All envia tudo, se nao verifica se quer os itens completos, se nao querer ele envia os incompletos.
+        ) 
         .filter(
           (todo) => todo.text.toLowerCase().includes(search.toLowerCase())
         )
