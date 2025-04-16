@@ -21,7 +21,7 @@ function App() {
     },
     {
       id: 3,
-      text: "Estudar React",
+      text: "Estudar matematica",
       category: "Estudos",
       isCompleted: false,
     }
